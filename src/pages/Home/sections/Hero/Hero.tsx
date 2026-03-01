@@ -7,6 +7,7 @@ function Hero() {
   // Onde criei 2 "classes" que se indentificam como as classes div e img
   // Que recebem caracteristicas especiais assemelhando-se as classes de css
   // até agora não sei o porque do uso mas, ele é bem especifico na hora de usar do que as classes em sí
+
   const StyledHero = styled("div")(() => ({
     backgroundColor: "black"
   }))
