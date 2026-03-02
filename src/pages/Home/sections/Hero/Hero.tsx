@@ -1,19 +1,23 @@
-import { Container, Grid, styled, Typography } from "@mui/material"
+import { Container, Grid, styled, Typography, Box } from "@mui/material"
 import Avatar from "../../../../assets/images/unknown.webp"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
+import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 
 function Hero() {
 
   const StyledHero = styled("div")(({theme}) => ({
     backgroundColor: theme.palette.primary.main,
-    height: "100vh"
+    height: "100vh",
+    display: 'flex',
+    alignItems: 'center'
   }))
 
-  const StyledImg = styled("img")(() => ({
+  const StyledImg = styled("img")(({theme}) => ({
     borderRadius: "50%",
-    width: "100%"
+    width: "80%",
+    border: `2px solid ${theme.palette.primary.contrastText}`
   }))
 
   return (
@@ -23,27 +27,35 @@ function Hero() {
         
         <Container maxWidth={'lg'}>
           <Grid container spacing={2}>
-            <Grid size={{xs: 12, md: 4}}>
-              <StyledImg src={Avatar} />
+            <Grid size={{xs: 12, md: 5}}>
+              <Box position='relative'>
+                <Box position='absolute' width={'150%'} top={-100} right={0} >
+                  <AnimatedBackground />
+                </Box>
+                <Box position={'absolute'} textAlign={'center'}>
+                  <StyledImg src={Avatar} />
+                </Box>
+              </Box>
+              
             </Grid>
-            <Grid size={{xs: 12, md: 8}}>
+            <Grid size={{xs: 12, md: 7}}>
 
               <Typography color="primary.contrastText" variant="h1" textAlign={"center"}>Keirrison Cauet</Typography>
               <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm an amateur front end dev</Typography>
               
-              <Grid container display={'flex'} justifyContent={'center'}>
+              <Grid container display={'flex'} justifyContent={'center'} spacing={2}>
 
                 <Grid size={{xs: 12, md: 4}} display={'flex'} justifyContent={'center'}>
                   <StyledButton>
                     <DownloadIcon />
-                    Download CV
+                    <Typography>Download CV</Typography>
                   </StyledButton>
                 </Grid>
 
                 <Grid size={{xs: 12, md: 4}} display={'flex'} justifyContent={'center'}>
                   <StyledButton>
                     <EmailIcon />
-                      Contact Me
+                    <Typography>Contact Me</Typography>
                   </StyledButton>
                 </Grid>
 
