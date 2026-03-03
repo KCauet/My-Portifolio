@@ -11,7 +11,13 @@ function Hero() {
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    [theme.breakpoints.up('xs')]: { // <= mobile, Mediaquery com typescript
+      paddingTop: '100px'
+    },
+    [theme.breakpoints.up('md')]: { // >= mobile
+      paddingTop: '0'
+    }
   }))
 
   const StyledImg = styled("img")(({theme}) => ({
@@ -40,20 +46,20 @@ function Hero() {
             </Grid>
             <Grid size={{xs: 12, md: 7}}>
 
-              <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Keirrison</Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm an amateur coder</Typography>
+              <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Keirrison Cauet</Typography>
+              <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm an amateur front end dev</Typography>
               
               <Grid container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
 
                 <Grid size={{xs: 12, md: 4}} display={'flex'} justifyContent={'center'}>
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log('Download')}>
                     <DownloadIcon />
                     <Typography>Download CV</Typography>
                   </StyledButton>
                 </Grid>
 
                 <Grid size={{xs: 12, md: 4}} display={'flex'} justifyContent={'center'}>
-                  <StyledButton>
+                  <StyledButton onClick={() => console.log('Contact')}>
                     <EmailIcon />
                     <Typography>Contact Me</Typography>
                   </StyledButton>
