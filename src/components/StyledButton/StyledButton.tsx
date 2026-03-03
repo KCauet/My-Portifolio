@@ -6,7 +6,7 @@ interface StyledButtonProps {
     onClick: () => void
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => { // SATA ANDAGIIII :D - i dunno why i did this lol
 
     const StyledButton = styled("button")(({theme}) => ({
             backgroundColor: "transparent",
