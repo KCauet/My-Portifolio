@@ -32,7 +32,7 @@ function Hero() {
                 <Box position='absolute' width={'150%'} top={-100} right={0} >
                   <AnimatedBackground />
                 </Box>
-                <Box position={'absolute'} textAlign={'center'}>
+                <Box position={'relative'} textAlign={'center'}>
                   <StyledImg src={Avatar} />
                 </Box>
               </Box>
@@ -40,10 +40,10 @@ function Hero() {
             </Grid>
             <Grid size={{xs: 12, md: 7}}>
 
-              <Typography color="primary.contrastText" variant="h1" textAlign={"center"}>Keirrison Cauet</Typography>
-              <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm an amateur front end dev</Typography>
+              <Typography color="primary.contrastText" variant="h1" textAlign={"center"} pb={2}>Keirrison</Typography>
+              <Typography color="primary.contrastText" variant="h2" textAlign={"center"}>I'm an amateur coder</Typography>
               
-              <Grid container display={'flex'} justifyContent={'center'} spacing={2}>
+              <Grid container display={'flex'} justifyContent={'center'} spacing={3} pt={3}>
 
                 <Grid size={{xs: 12, md: 4}} display={'flex'} justifyContent={'center'}>
                   <StyledButton>
