@@ -15,6 +15,14 @@ function About() {
         boxShadow: 3
     }
 
+    let largerBoxStyles = {
+        width: '80%',
+        padding: '15px',
+        minHeight: 140,
+        borderRadius: '2px',
+        boxShadow: 5
+    }
+
     const StyledAbout = styled("div")(() => ({
         height: '80vh'
     }))
@@ -47,18 +55,25 @@ function About() {
                                     <Box sx={boxStyles}>
                                         <Box textAlign={'center'} pt={1}>
                                             <LightbulbIcon />
-                                            <Typography fontWeight={'900'} variant="subtitle1">Esperiência</Typography>
-                                            <Typography>+1 Ano de desenvolvimento autodidata</Typography>
-                                            <Typography>Cursando ensino médio</Typography>
+                                            <Typography fontWeight={'900'} variant="subtitle1">Projetos</Typography>
+                                            <Typography>+5 Projetos feitos e postados no github</Typography>
+                                            <Typography>Projetos feitos além do escopo</Typography>
+                                            <Typography>Front End</Typography>
                                         </Box>
                                     </Box>
-
+                                    
                                 </Grid>
                             </Grid>
                         </Box>
+
                     </Box>
-                    
-                    
+
+                    <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
+                        <Typography variant="h2">Minha descrição</Typography>
+                        <Box sx={largerBoxStyles}>
+                            <Typography variant="subtitle1">Insira uma descrição sobre você aqui cauet :3</Typography>
+                        </Box>
+                    </Box>                    
 
                 </Container>
             </StyledAbout>
