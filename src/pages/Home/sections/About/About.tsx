@@ -34,7 +34,6 @@ function About() {
                 <Container maxWidth='lg'>
                     <Box display={'flex'} justifyContent={'center'}>
                         <Box>
-
                             <Typography variant="h2" textAlign={'center'}>About Me</Typography>
 
                             <Grid container display={'flex'} justifyContent={'center'} pt={2} spacing={4}>
@@ -65,13 +64,14 @@ function About() {
                                 </Grid>
                             </Grid>
                         </Box>
-
                     </Box>
 
                     <Box display={'flex'} flexDirection={'column'} alignItems={'center'}>
-                        <Typography variant="h2">Minha descrição</Typography>
-                        <Box sx={largerBoxStyles}>
-                            <Typography variant="subtitle1">Insira uma descrição sobre você aqui cauet :3</Typography>
+                        <Box sx={largerBoxStyles} textAlign={'center'} mt={'30px'}>
+                            <Typography variant="descText">Olá!, me chamo Keirrison Cauet De Oliveira Sousa e sou um estudante de ensino médio, 3° ano.</Typography>
+                            <Typography>Moro em amontada e desde o meu primeiro contato com a programação eu fiquei bem curioso e fascinado por ela, queria entender o porque e como a programação é.</Typography>
+                            <Typography>Também tenho boas espectativas e experiência para o futuro, eu sei que será uma caminhada dificil mas, eu acredito que tenho potencial.</Typography>
+                            <Typography>Comecei na área da programação com a linguagem python, que futuramente, me acomodei no front end usando React, mas ainda pretendo ser fullstack um dia.</Typography>
                         </Box>
                     </Box>                    
 
